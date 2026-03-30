@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 GAS Sandbox (Modern Ultimate)</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>
+      <i class="fas fa-layer-group text-primary"></i> 
+      GAS Sandbox 
+      <span class="header-badge">v5.0 Ultimate</span>
+    </h1>
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn-action" onclick="resetSimulator()" title="Reset Project">
+        <i class="fas fa-rotate-right"></i>
+      </button>
+      <button class="btn-run" onclick="runPreview()">
+        <i class="fas fa-play"></i> <span>Jalankan Preview</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="main-area">
+    <div class="editor-pane">
+      <div class="tab-bar">
+        <div class="tab-group">
+          <button class="tab-btn active" onclick="switchTab('html')">
+            <i class="fab fa-html5" style="color: #ef4444;"></i> index.html
+          </button>
+          <button class="tab-btn" onclick="switchTab('mock')">
+            <i class="fab fa-js" style="color: #f59e0b;"></i> backend.gs
+          </button>
+        </div>
+        <button class="btn-generate" onclick="generateMock()">
+          <i class="fas fa-wand-magic-sparkles"></i> Auto-Generate
+        </button>
+      </div>
+      
+      <div id="htmlEditorWrapper" class="editor-container active">
+        <textarea id="htmlCode" class="fallback-editor" spellcheck="false"></textarea>
+      </div>
+
+      <div id="mockEditorWrapper" class="editor-container">
+        <textarea id="mockCode" class="fallback-editor" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <div class="resizer" id="resizer"></div>
+
+    <div class="preview-pane">
+      <iframe id="previewFrame" sandbox="allow-scripts allow-same-origin allow-forms allow-modals"></iframe>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="customModal">
+    <div class="modal-box">
+      <h4 class="modal-title" id="modalTitle">Title</h4>
+      <div class="modal-body" id="modalBody">Body</div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
