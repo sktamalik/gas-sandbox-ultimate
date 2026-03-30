@@ -1,16 +1,34 @@
-# Folder konfigurasi VS Code pribadi
+# Konfigurasi Editor (Pribadi)
 .vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# File log (catatan error sistem)
+# File Sampah Sistem Operasi
+.DS_Store
+.DS_Store?
+._*
+Thumbtail.db
+desktop.ini
+
+# Log dan Temporary Files
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.tmp/
 
-# File sampah sistem operasi
-.DS_Store
-Thumbs.db
-
-# Jika nanti kamu pakai Node.js, abaikan folder ini
+# Folder Dependensi (Jika nanti pakai Node.js)
 node_modules/
+dist/
+build/
 
-# File environment/rahasia (sangat penting!)
+# File Rahasia / API Keys (Sangat Penting!)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
