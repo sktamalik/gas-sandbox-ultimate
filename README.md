@@ -25,5 +25,5 @@
 
 1. **Clone Repositori:**
    ```bash
-   git clone [https://github.com/username-B/gas-sandbox-ultimate.git](https://github.com/username-B/gas-sandbox-ultimate.git)
+   git clone [https://github.com/sktamalik/gas-sandbox-ultimate.git](https://github.com/sktamalik/gas-sandbox-ultimate.git)
    ```
