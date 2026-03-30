@@ -1,0 +1,16 @@
+# Folder konfigurasi VS Code pribadi
+.vscode/
+
+# File log (catatan error sistem)
+*.log
+npm-debug.log*
+
+# File sampah sistem operasi
+.DS_Store
+Thumbs.db
+
+# Jika nanti kamu pakai Node.js, abaikan folder ini
+node_modules/
+
+# File environment/rahasia (sangat penting!)
+.env
